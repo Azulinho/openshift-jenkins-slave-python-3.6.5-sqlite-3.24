@@ -16,7 +16,9 @@ RUN set -x \
     && cd sqlite-autoconf-3240000 \
     && ./configure --prefix=/opt/sqlite/3.24.0 \
     && make \
-    && make install
+    && make install \
+    && cd .. \
+    && rm -rf sqlite-autoconf-3240000*
 
 ENV PATH /opt/sqlite/3.24.0/bin:$PATH
 
