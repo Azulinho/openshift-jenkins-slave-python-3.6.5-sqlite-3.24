@@ -44,5 +44,5 @@ RUN find /home/jenkins -type d -exec chmod g+rwx {} \; \
 
 ENV PATH /opt/python/3.6.5/bin/:$PATH
 
-# switch to non-root for openshift usage
-
+# switch to non-root for openshift
+USER 1001
